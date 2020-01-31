@@ -17,5 +17,8 @@
             <br/>
             <input name='btnConnect' type='submit' /> <br/>
         </form>     
+        <%  String email = (String)session.getAttribute("login");
+        if(!email.contains("@gmail.com")) {%><p style="background: red; color: white; text-align: center">Veuillez entrer un mail valide</p>
+       <%} %>
     </body>
 </html>
