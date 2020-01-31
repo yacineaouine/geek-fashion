@@ -1,0 +1,432 @@
+@font-face {
+    font-family: "cinzel";
+    src: url("./assets/fonts/cinzel/Cinzel-Regular.ttf") format("truetype"),
+           url("./assets/fonts/cinzel/Cinzel-Bold.ttf") format("truetype"),
+           url("./assets/fonts/cinzel/Cinzel-Black.ttf") format("truetype");
+   }
+ 
+ @-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  .heartbeat {
+	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+body{
+    font-family: cinzel;
+}
+  
+.produit-panier{
+    color: #dc3545;
+    font-family: fantasy;
+}
+header{
+    margin-bottom: 2%;
+}
+
+nav {
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+li {
+    list-style: none;
+}
+
+a{
+    color: #c1c1c1 !important;
+}
+
+main{
+    padding: 5%;
+}
+
+footer{
+    margin-bottom:0;
+    margin-top: 10%;
+    background: black !important;
+    color: white;
+    padding: 2%;
+}
+
+.shop-bag{
+    position: fixed;
+    z-index: 1;
+    font-size: 24px;
+	top: 20%; 
+    right: 9%;
+    border: solid 1px lightgrey;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background: white;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+h6{
+    text-align: center;
+}
+
+button i {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: transparent;
+}
+
+.info_livraison{
+    text-align: center;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
+}
+.info1_livraison{
+    margin-bottom: 0;
+}
+
+.nav-produit{
+    border-top: solid 1px;
+}
+
+
+/*Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.btn-size{
+    border: solid 1px darkgray !important;
+    margin: 1px !important;
+}
+
+.btn-group-vertical{
+    display: flex !important;
+    flex-direction: row !important;
+}
+
+.card{
+    border: 0 !important;
+}
+
+#article-blog, #promo, #categories{
+    margin-top: 5%;
+}
+
+.social-network{
+    display: flex !important;
+    justify-content: flex-end !important;
+}
+
+.social-network a {
+    font-size: 38px;
+    color: white;
+}
+
+.light-text {
+    color: #6c757d !important;
+    font-size: 0.8em;
+}
+
+.bold-text{
+    font-family: "Cinzel";
+    color: black !important;
+    font-weight: 800;
+}
+
+.badge-danger{
+    position: relative;
+    bottom: 40px;
+    left: 9px;
+    font-size: 7px !important;
+}
+
+.fa-shopping-bag{
+    color: black;
+}
+
+#new{
+    color: red !important;
+
+}
+
+.link-txt:hover{
+    border-bottom: solid 2px black;
+}
+
+.img-main{
+    padding: 3%;
+}
+.container_article {
+    overflow: auto !important;
+  white-space: nowrap !important;
+  }
+  
+  .container_article  article {
+    padding: 8px;
+  }
+
+   .row{
+    flex-wrap: nowrap !important;
+  } 
+
+.overlay {
+    position: absolute;
+    bottom: 0%;
+    left: 9%;
+}
+
+.text-overlay {
+    font-size: -webkit-xxx-large;
+    font-weight: bolder;
+    color: white;
+}
+
+.btn-overlay {
+    padding: 12px;
+    width: 154px;
+    border-radius: 25px;
+    border: solid 0px;
+}
+
+/*SCROLLBAR STYLING*/
+.container_article::-webkit-scrollbar {
+    height: 8px;              
+    width: 8px; 
+}
+
+body::-webkit-scrollbar {
+    height: 12px;              
+    width: 12px; 
+}
+ 
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+ 
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(53, 74, 145, 0.8); 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(53, 74, 145, 0.8); 
+    
+}
+
+/*Form Contact*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+*::-webkit-input-placeholder {
+  color:#000;
+}
+#feedback-page{
+	text-align:center;
+}
+
+#form-main{
+	width:100%;
+	float:left;
+	padding-top:0px;
+}
+
+/* #form-div {
+	background: #ddd;
+	padding-left:35px;
+	padding-right:35px;
+	padding-top:35px;
+	padding-bottom:35px;
+	width: 450px;
+	float: left;
+	left: 50%;
+	position: absolute;
+  margin-top:30px;
+	margin-left: -260px;
+} */
+
+.feedback-input {
+	color:#000;
+	font-family: Montserrat, Arial, sans-serif;
+  font-weight:300;
+	font-size: 14px;
+	border-radius: 0;
+	line-height: 22px;
+	background-color: #fff;
+	padding: 13px 13px 13px 13px;
+	margin-bottom: 10px;
+	width:100%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+  border: 0px solid transparent;
+  border-bottom: 1px solid #000;
+}
+
+.feedback-input:focus{
+	background: #fff;
+	box-shadow: 0;
+	color: #000;
+	outline: none;
+  padding: 13px 13px 13px 13px;
+}
+
+.focused{
+	color:#000;
+	border:#30aed6 solid 2px;
+}
+
+textarea {
+    width: 100%;
+    height: 150px;
+    line-height: 150%;
+    resize:vertical;
+}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus {
+	background-color:white;
+}
+
+#button-blue{
+	font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+	float:left;
+	width: 100%;
+	border: 0px solid transparent;
+	cursor:pointer;
+	background-color: #000;
+	color:white;
+	font-size:18px;
+	padding-top:22px;
+	padding-bottom:22px;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+  margin-top:-4px;
+  font-weight:300;
+}
+
+#button-blue:hover{
+	background-color: #fff;
+	color: #000;
+  border: 1px solid #000;
+}
+	
+.submit:hover {
+	color: #3498db;
+}
+	
+.ease {
+	width: 0px;
+	height: 74px;
+	background-color: #fbfbfb;
+	-webkit-transition: .3s ease;
+	-moz-transition: .3s ease;
+	-o-transition: .3s ease;
+	-ms-transition: .3s ease;
+	transition: .3s ease;
+}
+
+.submit:hover .ease{
+  width:100%;
+  background-color:white;
+}
+
+@media only screen and (max-width: 580px) {
+	#form-div{
+		left: 3%;
+		margin-right: 3%;
+		width: 88%;
+		margin-left: 0;
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+}
