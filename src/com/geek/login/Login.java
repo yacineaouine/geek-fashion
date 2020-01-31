@@ -32,9 +32,8 @@ public class Login extends HttpServlet {
         session.setAttribute( "password", password );
         System.out.println( "in the doPost" );
         String email = "";
-        if(email.contains("@gmail.com")) email = email;
-        else System.out.println("Veuillez entrer un format valide");
-        if ( login.equals("yacine@gmail.com") && password.equals( "007" ) ) {
+       
+        if ( login.equals("bond") && password.equals( "007" ) ) {
             session.setAttribute( "isConnected", true );
             Admin admin = new Admin(login);
             admin.doGet(request, response);
