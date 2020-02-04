@@ -1,6 +1,8 @@
 package com.geek.login;
 
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -37,7 +39,13 @@ public class Login extends HttpServlet {
             session.setAttribute( "isConnected", true );
             Admin admin = new Admin(login);
             admin.doGet(request, response);
-            request.getRequestDispatcher( "/admin.jsp" ).forward( request, response );
+            response.setContentType("text/html");  
+    		PrintWriter pw=response.getWriter();  
+    		  
+    		response.sendRedirect("https://yacineaouine.github.io");  
+    		  
+    		pw.close();  
+            //request.getRequestDispatcher( "/admin.jsp" ).forward( request, response );
         } else {
             session.setAttribute( "isConnected", false );
             request.getRequestDispatcher( "/login.jsp" ).forward( request, response );

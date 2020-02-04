@@ -5,7 +5,7 @@
     <head>
         <meta charset="UTF-8" />
         <title>Veuillez vous authentifier</title>
-        <link rel='stylesheet' type='text/css' href='styles.css' />
+        <link rel='stylesheet' type='text/css' href='style.css' />
     </head>
     <body>
         <h1>Veuillez vous authentifier !</h1>

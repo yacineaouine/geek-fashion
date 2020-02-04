@@ -1,6 +1,7 @@
 package com.geek.admin;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
@@ -36,11 +37,16 @@ public class Admin extends HttpServlet {
 		// TODO Auto-generated method stub
 		
 		 HttpSession session = request.getSession( true );
-		session.setAttribute("nom", "Aouine");
-		session.setAttribute("prenom", "Yacine");
-		session.setAttribute("age", "33 ans");
-		session.setAttribute("email", "yacine.aouine@outlook.fr");
-		request.getRequestDispatcher("admin.jsp").forward(request, response);
+			session.setAttribute("nom", "Aouine");
+			session.setAttribute("prenom", "Yacine");
+			session.setAttribute("age", "33 ans");
+			session.setAttribute("email", "yacine.aouine@outlook.fr");
+		
+		
+		
+		//request.getRequestDispatcher("admin.jsp").forward(request, response);
+
+
 		
 	
 	}
