@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/j2ee" 
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd">
+        
+    <tlib-version>1.0</tlib-version>
+	<jsp-version>2.3</jsp-version>
+	<short-name>KoorLib</short-name>
+	<display-name>Koor extra tags library</display-name>
+	<uri>http://koor.fr/tld/extratags</uri>
+
+	<tag>
+	
+		<name>LoginForm</name>
+		<tagclass>fr.koor.webstore.ihm.tags.LoginForm</tagclass>
+		<bodycontent>JSP</bodycontent>
+		
+		<attribute>
+			<name>action</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>login</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>password</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+		</attribute>
+		
+	</tag>
+
+</taglib>

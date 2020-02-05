@@ -26,10 +26,8 @@
 </head>
 
 <body>
-<h5 style="text-align: center;">Dashboard</h5>
-<h6 style="text-align: center;">Bienvenue Mr ${nom}</h6>
+<h5 style="text-align: center;">Dashboard de Mr ${connectedUser.login}</h5>
 
- 
  <section style="display: flex;">
     
   <div class="row">
@@ -62,7 +60,7 @@
           <tr>
               <th>Id</th>
               <th>Produit</th>
-              <th>Quantité</th>
+              <th>Description</th>
               <th>Prix</th>
               <th></th>
           </tr>
@@ -71,10 +69,10 @@
         <tbody>
           <tr>
 
-                <td>1</td> 
-                <td>Adidas</td>
-                <td>1</td>    
-               <td>50 €</td>   
+                <td>${catalogBrowser.currentArticle.idArticle}</td> 
+                <td>${catalogBrowser.currentArticle.brand}</td>
+                <td>${catalogBrowser.currentArticle.description}</td>    
+               <td>${catalogBrowser.currentArticle.unitaryPrice} €</td>   
                <td><a class="waves-effect waves-light btn-small">Voir</a></td>   
           </tr>
           <tr>

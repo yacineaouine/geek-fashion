@@ -17,5 +17,6 @@
             <br/>
             <input name='btnConnect' type='submit' /> <br/>
         </form>     
+         <div class="errorMessage">${errorMessage}</div>
     </body>
 </html>

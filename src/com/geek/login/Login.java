@@ -36,6 +36,7 @@ public class Login extends HttpServlet {
         String email = "";
        
         if ( login.equals("bond") && password.equals( "007" ) ) {
+        	 System.out.println( "good ID" );
             session.setAttribute( "isConnected", true );
             Admin admin = new Admin(login);
             admin.doGet(request, response);
@@ -47,6 +48,7 @@ public class Login extends HttpServlet {
     		pw.close();  
             //request.getRequestDispatcher( "/admin.jsp" ).forward( request, response );
         } else {
+        	 System.out.println( "BAD ID" );
             session.setAttribute( "isConnected", false );
             request.getRequestDispatcher( "/login.jsp" ).forward( request, response );
         }
