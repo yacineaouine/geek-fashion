@@ -29,8 +29,11 @@ public class SignIn extends HttpServlet {
     
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-    	
+    	request.setAttribute( "login", "" );
+		request.setAttribute( "password", "" );
+		request.setAttribute( "errorMessage", "Mauvais login ou mot de passe" );	
+		request.getRequestDispatcher( "/signin.jsp" ).forward( request, response );
+	
     }
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -38,33 +41,32 @@ public class SignIn extends HttpServlet {
     	
     	
     	 //SE CONNECTER
-        String loginC = request.getParameter( "txtLogin" );
-		String passwordC = request.getParameter( "txtPassword" );
+    
+        String login = request.getParameter( "txtLogin" );
+		String password = request.getParameter( "txtPassword" );
 		
-		request.setAttribute( "loginC", loginC );
-		request.setAttribute( "passwordC", passwordC );
+		request.setAttribute( "loginC", login );
+		request.setAttribute( "passwordC", password );
 		
 		User connectedUser = null;
-		try {
-			connectedUser = UserDAO.isValidLogin( loginC, passwordC );
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
+			try {
+				connectedUser = UserDAO.isValidLogin( login, password );
+			} catch (ClassNotFoundException | IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		if ( connectedUser != null ) {
 			
 			HttpSession session2 = request.getSession( true );
 			session2.setAttribute( "connectedUser", connectedUser );
 			session2.setAttribute( "catalogBrowser", new CatalogBrowser() );
 			request.getRequestDispatcher( "/monprofil.jsp" ).forward( request, response );
+			request.setAttribute( "errorMessage", "" );	
 		
 		} else {
-		
-			request.setAttribute( "errorMessage", "Bad identity" );			
-			request.getRequestDispatcher( "/profil.jsp" ).forward( request, response );
+			
+			doGet(request, response);			
 			
 		}
         

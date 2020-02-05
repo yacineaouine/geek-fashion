@@ -24,9 +24,16 @@
 <body>
 
 
+<button style="background: black;">
+ <a  href="./">Retour à l'accueil</a>
+</button>
 
 <h1 style="text-align: center;">S'inscrire</h1>
-   <p style="background: red; color: white; text-align: center; font-size: 32px;"> ${message}</p>
+
+   <p > ${message}</p>
+   
+    <p style="background: red; color: white; text-align: center; font-size: 32px;" class="errorMessage">${errorMessage}</p>
+    
  <form method="post" class="form" id="form1" action="signup">
                             
     <p class="name"> 

@@ -26,6 +26,10 @@
 </head>
 
 <body>
+<button style="background: black;">
+ <a  href="./">Retour à l'accueil</a>
+</button>
+
 <h5 style="text-align: center;">Dashboard de Mr ${connectedUser.login}</h5>
 
  <section style="display: flex;">

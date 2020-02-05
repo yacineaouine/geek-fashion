@@ -44,8 +44,8 @@ public class SignUp extends HttpServlet  {
 		
 		request.setAttribute( "login", "" );
 		request.setAttribute( "password", "" );
-		request.setAttribute( "errorMessage", "" );
-		request.getRequestDispatcher( "/login.jsp" ).forward( request, response );
+		request.setAttribute( "errorMessage", "Veuillez renseigner les bonnes infos" );	
+		request.getRequestDispatcher( "/signup.jsp" ).forward( request, response );
         
 	       
 	}
@@ -90,7 +90,7 @@ public class SignUp extends HttpServlet  {
         	}
         else {
         	System.out.println("erreur email ou mdp");
-        	
+        		
         	 doGet(request, response);
         	}
         
