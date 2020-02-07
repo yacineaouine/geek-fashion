@@ -1,9 +1,4 @@
-@font-face {
-    font-family: "cinzel";
-    src: url("./assets/fonts/cinzel/Cinzel-Regular.ttf") format("truetype"),
-           url("./assets/fonts/cinzel/Cinzel-Bold.ttf") format("truetype"),
-           url("./assets/fonts/cinzel/Cinzel-Black.ttf") format("truetype");
-   }
+
  
  @-webkit-keyframes heartbeat {
     from {
@@ -78,9 +73,6 @@
 	        animation: heartbeat 1.5s ease-in-out infinite both;
 }
 
-body{
-    font-family: cinzel;
-}
   
 .produit-panier{
     color: #dc3545;
@@ -212,7 +204,6 @@ button i {
 }
 
 .bold-text{
-    font-family: "Cinzel";
     color: black !important;
     font-weight: 800;
 }

@@ -37,25 +37,8 @@
         <nav class="navbar navbar-expand-sm bg-light navbar-light">
 
             <!--LOGO-->
-            <div><a href="./index.html">Retour <i class="large material-icons">chevron_left</i></a></div>
-
-            <!--LIENS-->
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="./profil.jsp">Mon Compte</a>
-              </li>
-              <li class="nav-item shop-bag" >             
-                <a id="bag" href="#" class="nav-link"  data-toggle="popover" title="Mon Panier" data-placement="top"  ><i class="fas fa-shopping-bag"></i></a>
-                <span id="nb-produit" class="badge badge-danger">0</span>
-            </li>
-              <li class="nav-item">
-                <a class="nav-link " href="./login">Administrateur</a>
-              </li>
-            </ul>
-
-          </nav>
-
-                  
+            <div class="btn-back"><a href="./index.html">Retour <i class="large material-icons">chevron_left</i></a></div>
+               
     </header>
 
 <main id="ancre">

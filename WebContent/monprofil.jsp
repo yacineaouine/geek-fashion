@@ -31,6 +31,8 @@
 </button>
 
 <h5 style="text-align: center;">Dashboard de Mr ${connectedUser.login}</h5>
+<h5 style="text-align: center;">Id User: ${connectedUser.idUser}</h5>
+<h5 style="text-align: center;">MdP: ${connectedUser.password}</h5>
 
  <section style="display: flex;">
     
