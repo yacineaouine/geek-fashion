@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="com.geek.beans.Personne" %>
+
 
 <!DOCTYPE html>
 <html>
@@ -37,7 +37,7 @@
         <nav class="navbar navbar-expand-sm bg-light navbar-light">
 
             <!--LOGO-->
-            <div class="btn-back"><a href="./index.html">Retour <i class="large material-icons">chevron_left</i></a></div>
+            <div class="btn-back"><a href="./">Retour <i class="large material-icons">chevron_left</i></a></div>
                
     </header>
 

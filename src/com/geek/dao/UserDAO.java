@@ -22,12 +22,10 @@ public class UserDAO extends DAOContext {
 	public static User isValidLogin( String login, String password ) throws IOException, ClassNotFoundException {
 		
 		/* Connexion à la base de données */
-		String url = "jdbc:mysql://localhost:3306/webstore";
-		String utilisateur = "root";
-		String motDePasse = "";
+
 		Connection connexion = null;
 		try {
-		    connexion = DriverManager.getConnection( url, utilisateur, motDePasse );
+		    connexion = DriverManager.getConnection( dbURL, dbLogin, dbPassword );
 
 		    /* Ici, nous placerons nos requêtes vers la BDD */
 		    /* ... */
@@ -42,7 +40,11 @@ public class UserDAO extends DAOContext {
 								resultSet.getInt( "idUser" ),
 								resultSet.getString( "login" ),
 								resultSet.getString( "password" ),
-								resultSet.getInt( "connectionNumber" )
+								resultSet.getString( "nom" ),
+								resultSet.getString( "prenom" ),
+								resultSet.getString( "age" ),
+								resultSet.getString("datenaissance"),
+								resultSet.getString( "adresse" )
 						);
 					} else {
 						return null;
@@ -66,5 +68,32 @@ public class UserDAO extends DAOContext {
 		
 
 	}
+	
+	public static void addUser( String login, String password, String nom, String prenom, String age, String dateNaissance, String adresse ){
+		System.out.println("Add User");
+	
+		Connection connexion = null;
+		 
+		 try {
+			 connexion = DriverManager.getConnection( dbURL, dbLogin, dbPassword );
+			 
+	            PreparedStatement preparedStatement = connexion.prepareStatement("INSERT INTO T_Users(login, password, nom, prenom, age, dateNaissance, adresse) VALUES(?, ?, ?, ?, ?, ?, ?);");
+	            preparedStatement.setString(1, login);
+	            preparedStatement.setString(2, password);
+	            preparedStatement.setString(3, nom);
+	            preparedStatement.setString(4, prenom);
+	            preparedStatement.setString(5, age);
+	            preparedStatement.setString(6, dateNaissance);
+	            preparedStatement.setString(7, adresse);
+	            
+	            preparedStatement.executeUpdate();
+	        } catch (SQLException e) {
+	            e.printStackTrace();
+	        }
+		
+
+	}
+	
+
 	
 }

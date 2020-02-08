@@ -21,8 +21,8 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!-- Compiled and minified CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="help.css">  
+	<link rel="stylesheet" href="./styles/monprofil.css">
+
 </head>
 
 <body>
@@ -30,9 +30,7 @@
  <a  href="./">Retour à l'accueil</a>
 </button>
 
-<h5 style="text-align: center;">Dashboard de Mr ${connectedUser.login}</h5>
-<h5 style="text-align: center;">Id User: ${connectedUser.idUser}</h5>
-<h5 style="text-align: center;">MdP: ${connectedUser.password}</h5>
+<h5 style="text-align: center;">Dashboard de Mr ${connectedUser.nom}</h5>
 
  <section style="display: flex;">
     
@@ -41,7 +39,7 @@
       <div class="card">
         <div class="card-image">
           <img src="./assets/profile-bg.jpg">
-          <span class="card-title">${prenom} ${name}</span>
+          <span class="card-title"> ${connectedUser.prenom}  ${connectedUser.nom}</span>
           <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
         </div>
         <div class="card-content" style="display: flex;
@@ -49,11 +47,11 @@
 										    justify-content: center;
 										    align-items: center;">
         	<h6>Votre Age:</h6>
-          	<p style="color: #039be5;">${date} ans</p>
+          	<p style="color: #039be5;">${connectedUser.age} ans</p>
           	<h6>Votre Mail:</h6>
-          	<p style="color: #039be5;">${email}</p>
+          	<p style="color: #039be5;">${connectedUser.login}</p>
         	<h6>Votre Adresse:</h6>
-          	<p style="color: #039be5;">${adresse}</p>
+          	<p style="color: #039be5;">${connectedUser.adresse}</p>
         </div>
       </div>
     </div>

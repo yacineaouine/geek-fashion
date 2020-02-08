@@ -1,6 +1,10 @@
 package com.geek.signup;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
@@ -53,9 +57,10 @@ public class SignUp extends HttpServlet  {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		// TODO Auto-generated method stub
 		// S'ENREGISTRER
+		System.out.println("test ajout user");
 	 	String name = request.getParameter( "name" );
         String prenom = request.getParameter( "prenom" );
         String date = request.getParameter( "date" );
@@ -75,20 +80,21 @@ public class SignUp extends HttpServlet  {
         int years = this.calculateAge(birthDate, currentDate);
         
         HttpSession session = request.getSession( true );
+	        session.setAttribute( "email", email );
+	        session.setAttribute( "mdp", mdp );
 	        session.setAttribute( "name", name );
 	        session.setAttribute( "prenom", prenom );
 	        session.setAttribute( "date", years );
-	        session.setAttribute( "email", email );
-	        session.setAttribute( "mdp", mdp );
 	        session.setAttribute( "adresse", adresse );
     
-        if ( (email.contains("@gmail.com") || email.contains("@hotmail.fr") || email.contains("@outlook.fr")) &&  mdp.length() >= 8 ) {
-        	
-        	 if(years >= 18)  request.getRequestDispatcher( "/monprofil.jsp" ).forward( request, response ); 
-        	 else  message = "Vous devez avoir plus de 18ans";request.setAttribute("message", message);request.getRequestDispatcher( "/profil.jsp" ).forward( request, response ); doGet(request, response);
+        if ( /*(email.contains("@gmail.com") || email.contains("@hotmail.fr") || email.contains("@outlook.fr")) &&*/  mdp.length() >= 8 ) {
         
-        	}
-        else {
+        String birthDateString = birthDate.toString();
+        String yearsString = Integer.toString(years);
+		UserDAO.addUser(email, mdp, name, prenom, birthDateString, yearsString, adresse);
+        request.getRequestDispatcher( "/monprofil.jsp" ).forward( request, response ); 
+		
+        } else {
         	System.out.println("erreur email ou mdp");
         		
         	 doGet(request, response);
@@ -97,6 +103,8 @@ public class SignUp extends HttpServlet  {
        
         
 	}
+	
+
 	
 	protected int calculateAge(
 			  LocalDate birthDate,
