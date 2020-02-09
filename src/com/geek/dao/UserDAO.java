@@ -16,20 +16,20 @@ import java.sql.Statement;
 
 
 public class UserDAO extends DAOContext {
-	
-	
+
+
 
 	public static User isValidLogin( String login, String password ) throws IOException, ClassNotFoundException {
-		
-		/* Connexion à la base de données */
+
+		/* Connexion ï¿½ la base de donnï¿½es */
 
 		Connection connexion = null;
 		try {
-		    connexion = DriverManager.getConnection( dbURL, dbLogin, dbPassword );
+			connexion = DriverManager.getConnection( dbURL, dbLogin, dbPassword );
 
-		    /* Ici, nous placerons nos requêtes vers la BDD */
-		    /* ... */
-		    String strSql = "SELECT * FROM T_Users WHERE login=? AND password=?";
+			/* Ici, nous placerons nos requï¿½tes vers la BDD */
+			/* ... */
+			String strSql = "SELECT * FROM T_Users WHERE login=? AND password=?";
 			System.out.println(strSql);
 			try ( PreparedStatement statement  = connexion.prepareStatement( strSql ) ) {
 				statement.setString( 1, login );
@@ -45,7 +45,7 @@ public class UserDAO extends DAOContext {
 								resultSet.getString( "age" ),
 								resultSet.getString("datenaissance"),
 								resultSet.getString( "adresse" )
-						);
+								);
 					} else {
 						return null;
 					}
@@ -53,47 +53,94 @@ public class UserDAO extends DAOContext {
 			}
 
 		} catch ( SQLException e ) {
-		    /* Gérer les éventuelles erreurs ici */
+			/* Gï¿½rer les ï¿½ventuelles erreurs ici */
 			System.out.println(e);
 		} finally {
-		    if ( connexion != null )
-		        try {
-		            /* Fermeture de la connexion */
-		            connexion.close();
-		        } catch ( SQLException ignore ) {
-		            /* Si une erreur survient lors de la fermeture, il suffit de l'ignorer. */
-		        }
+			if ( connexion != null )
+				try {
+					/* Fermeture de la connexion */
+					connexion.close();
+				} catch ( SQLException ignore ) {
+					/* Si une erreur survient lors de la fermeture, il suffit de l'ignorer. */
+				}
 		}
 		return null;
-		
+
 
 	}
-	
+
 	public static void addUser( String login, String password, String nom, String prenom, String age, String dateNaissance, String adresse ){
 		System.out.println("Add User");
-	
+
 		Connection connexion = null;
-		 
-		 try {
-			 connexion = DriverManager.getConnection( dbURL, dbLogin, dbPassword );
-			 
-	            PreparedStatement preparedStatement = connexion.prepareStatement("INSERT INTO T_Users(login, password, nom, prenom, age, dateNaissance, adresse) VALUES(?, ?, ?, ?, ?, ?, ?);");
-	            preparedStatement.setString(1, login);
-	            preparedStatement.setString(2, password);
-	            preparedStatement.setString(3, nom);
-	            preparedStatement.setString(4, prenom);
-	            preparedStatement.setString(5, age);
-	            preparedStatement.setString(6, dateNaissance);
-	            preparedStatement.setString(7, adresse);
-	            
-	            preparedStatement.executeUpdate();
-	        } catch (SQLException e) {
-	            e.printStackTrace();
-	        }
-		
+
+		try {
+			connexion = DriverManager.getConnection( dbURL, dbLogin, dbPassword );
+
+			PreparedStatement preparedStatement = connexion.prepareStatement("INSERT INTO T_Users(login, password, nom, prenom, age, dateNaissance, adresse) VALUES(?, ?, ?, ?, ?, ?, ?);");
+			preparedStatement.setString(1, login);
+			preparedStatement.setString(2, password);
+			preparedStatement.setString(3, nom);
+			preparedStatement.setString(4, prenom);
+			preparedStatement.setString(5, age);
+			preparedStatement.setString(6, dateNaissance);
+			preparedStatement.setString(7, adresse);
+
+			preparedStatement.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
 
 	}
-	
 
-	
+	public static void deleteUser(int id){
+
+		System.out.println("Delete User");
+		System.out.println(id);
+
+
+		/* Connexion ï¿½ la base de donnï¿½es */
+
+		Connection connexion = null;
+		try {
+			connexion = DriverManager.getConnection( dbURL, dbLogin, dbPassword );
+
+			/* Ici, nous placerons nos requï¿½tes vers la BDD */
+
+
+			String sql = "DELETE FROM T_Users WHERE IdUser = ?;";
+
+			try ( PreparedStatement stmt = connexion.prepareStatement(sql)) {
+
+				stmt.setInt(1, id);
+				stmt.executeUpdate();
+				
+				System.out.println("deleted successfully");
+				
+
+			} catch ( SQLException e ) {
+				/* Gï¿½rer les ï¿½ventuelles erreurs ici */
+				System.out.println(e);
+			} finally {
+				if ( connexion != null )
+					try {
+						/* Fermeture de la connexion */
+						connexion.close();
+				
+					} catch ( SQLException ignore ) {
+						/* Si une erreur survient lors de la fermeture, il suffit de l'ignorer. */
+					}
+			}
+
+
+		}catch ( SQLException e ) {
+			/* Gï¿½rer les ï¿½ventuelles erreurs ici */
+			System.out.println("Au niveau du DriverManager" + e);
+		}
+
+		
+
+
+	}
 }

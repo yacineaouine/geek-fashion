@@ -30,7 +30,6 @@
 
 <h1 style="text-align: center;">S'inscrire</h1>
 
-   <p > ${message}</p>
    
     <p style="background: red; color: white; text-align: center; font-size: 32px;" class="errorMessage">${errorMessage}</p>
     

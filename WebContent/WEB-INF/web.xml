@@ -27,6 +27,11 @@
 			<taglib-uri>http://koor.fr/tld/extratags</taglib-uri>
 			<taglib-location>/WEB-INF/extratags.tld</taglib-location>
 		</taglib>
+		<jsp-property-group>
+           <description>Config. de l'encodage des pages JSP</description>
+           <url-pattern>*.jsp</url-pattern>
+           <page-encoding>UTF-8</page-encoding>
+       </jsp-property-group>
 	</jsp-config>
 	
 	
@@ -35,11 +40,6 @@
 	</session-config>
 	
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
 </web-app>
