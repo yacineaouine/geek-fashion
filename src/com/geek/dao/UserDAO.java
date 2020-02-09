@@ -30,7 +30,7 @@ public class UserDAO extends DAOContext {
 			/* Ici, nous placerons nos requ�tes vers la BDD */
 			/* ... */
 			String strSql = "SELECT * FROM T_Users WHERE login=? AND password=?";
-			System.out.println(strSql);
+		
 			try ( PreparedStatement statement  = connexion.prepareStatement( strSql ) ) {
 				statement.setString( 1, login );
 				statement.setString( 2, password );
@@ -69,7 +69,7 @@ public class UserDAO extends DAOContext {
 
 	}
 
-	public static void addUser( String login, String password, String nom, String prenom, String age, String dateNaissance, String adresse ){
+	public static User addUser( String login, String password, String nom, String prenom, String age, String dateNaissance, String adresse ) throws ClassNotFoundException, IOException{
 		System.out.println("Add User");
 
 		Connection connexion = null;
@@ -87,9 +87,14 @@ public class UserDAO extends DAOContext {
 			preparedStatement.setString(7, adresse);
 
 			preparedStatement.executeUpdate();
+			
+	
+			return UserDAO.isValidLogin(login, password);
+				
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		return null;
 
 
 	}
