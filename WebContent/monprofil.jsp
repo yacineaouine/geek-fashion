@@ -26,6 +26,10 @@
 </head>
 
 <body>
+	
+	<c:if test="${ !empty sessionScope.connectUser && !empty sessionScope.catalogBrowser }">
+        <p>Vous êtes ${ sessionScope.connectUser.login } ${ sessionScope.catalogBrowser } !</p>
+    </c:if>
 
 	<a href="./" class="waves-effect waves-light btn">Retour à
 		l'accueil</a>
@@ -126,7 +130,7 @@
 					<td>50 €</td>
 					<td><a class="waves-effect waves-light btn-small">Voir</a></td>
 				</tr>
-
+				
 			</tbody>
 		</table>
 

@@ -31,7 +31,6 @@ public class MonProfil extends HttpServlet {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		request.setAttribute( "errorMessage", "Veuillez renseigner le bon mot de passe" );	
-		request.getRequestDispatcher( "/monprofil.jsp" ).forward( request, response );
 	}
 
 	/**
