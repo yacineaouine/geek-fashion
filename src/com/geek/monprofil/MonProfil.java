@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.geek.dao.ArticleDAO;
 import com.geek.dao.UserDAO;
 
 /**
@@ -38,18 +39,42 @@ public class MonProfil extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		String myid = request.getParameter( "id" );
-		int id = Integer.parseInt(myid);
-		 String mdpuser = request.getParameter( "mdpuser" );
-        String mdp = request.getParameter( "mdp" );
-        	System.out.println(mdpuser);
-        //si le mdp correspond au mdp de  la bdd on supprime le compte
-        if(mdpuser.contentEquals(mdp)) {
-        	System.out.println("on delete");
-        	UserDAO.deleteUser(id); 
-        	request.getRequestDispatcher( "/index.jsp" ).forward( request, response );
-        }
-        else doGet(request, response);
+		
+		
+		String hiddenParam  = request.getParameter( "hiddenParam" );
+		switch(hiddenParam){
+		  case "formDelete":
+			//DELETE ACCOUNT FORM
+			  String myid = request.getParameter( "id" );
+			  int id = Integer.parseInt(myid);
+			  String mdpuser = request.getParameter( "mdpuser" );
+		      String mdp = request.getParameter( "mdp" );
+		      
+		      System.out.println(mdpuser);
+		        //si le mdp correspond au mdp de  la bdd on supprime le compte
+		        if(mdpuser.contentEquals(mdp)) {
+		        	System.out.println("on delete");
+		        	UserDAO.deleteUser(id); 
+		        	request.getRequestDispatcher( "/index.jsp" ).forward( request, response );
+		        }
+		        else doGet(request, response);
+		    break;
+		  case "formCreateArticle":
+		    //CREATE ARTICLE FORM
+			  String description = request.getParameter("description");
+			  String hashtag = request.getParameter("hashtag");
+			  String unitaryPrice = request.getParameter("unitaryPrice");
+			  String urlImage = request.getParameter("urlImage");
+			  
+			  try {
+				ArticleDAO.addArticle(description, hashtag, unitaryPrice, urlImage);
+			} catch (ClassNotFoundException | IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		    break;
+		}
+		
 	}
 
 }

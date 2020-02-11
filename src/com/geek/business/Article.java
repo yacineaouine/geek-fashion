@@ -6,18 +6,20 @@ public class Article {
 	private String description;
 	private String brand;
 	private String unitaryPrice;
+	private String urlImage;
 	
 	
 	public Article() {
-		this( 0, "unknown", "unknown", "0" );
+		this( 0, "unknown", "unknown", "0", "unknown");
 	}
 	
 	
-	public Article( int idArticle, String description, String brand, String unitaryPrice ) {
+	public Article( int idArticle, String description, String brand, String unitaryPrice, String urlImage ) {
 		this.setIdArticle( idArticle );
 		this.setDescription( description );
 		this.setBrand( brand );
 		this.setUnitaryPrice( unitaryPrice );
+		this.setUnitaryPrice( urlImage );
 	}
 
 
@@ -52,6 +54,15 @@ public class Article {
 	public void setUnitaryPrice(String unitaryPrice) {
 		this.unitaryPrice = unitaryPrice;
 	}
+	
+	public String getUrlImage() {
+		return urlImage;
+	}
+
+	public void setUrlImage(String urlImage) {
+		this.urlImage = urlImage;
+	}
+
 	
 	
 	

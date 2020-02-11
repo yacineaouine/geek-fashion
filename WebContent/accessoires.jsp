@@ -61,7 +61,7 @@
 				<div class="col s3 ">
 					<div class="card white">
 						<div class="card-image">
-							<img src="assets/logi.jpg"> <span class="card-title"><c:out
+							<img src="${art.urlImage}"> <span class="card-title"><c:out
 									value="${art.brand}"></c:out></span>
 						</div>
 						<div class="card-content black-text">

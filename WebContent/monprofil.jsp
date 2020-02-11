@@ -82,6 +82,7 @@
 							<div class="collapsible-body">
 								<div class="row">
 									<form method="post" action="MonProfil" class="col s12">
+										<input name="hiddenParam" type="hidden" value="formDelete">
 										<input name="id" type="hidden" value="${connectedUser.idUser}">
 										<input name="mdpuser" type="hidden"
 											value="${connectedUser.password}">
@@ -185,6 +186,34 @@
 				</form>
 			</div>
 		</div>
+	</div>
+	
+	<!-- Formulaire pour que le client puisse créer un produit -->
+	<h3 style="text-align: center">Créer un article</h3>
+	<div class="card">
+	
+		<form method="post" action="MonProfil"  >
+		
+			<input name="hiddenParam" type="hidden" value="formCreateArticle">
+			
+			<label for='hashtag'>Votre Hashtag :</label> 	
+			<input required id='hashtag' name='hashtag' type='text' value='#'/> <br />
+			
+			<label for='description'>Votre Description :</label> 
+			<input required id='description' name='description' type='text' /> <br />
+			
+			<label for='unitaryPrice'>Votre Prix :</label>
+			<input required id='unitaryPricerice' name='unitaryPrice' type='text'/> <br />
+			
+			<label for='urlImage'>Votre Image (Facultatif):</label>
+			<input id='urlImage' name='urlImage' type='text'/> <br />
+		
+			<button class="btn waves-effect waves-light" type="submit"
+				name="btnConnect">
+				Ajouter<i class="material-icons right">send</i>
+			</button>
+		</form>
+
 	</div>
 
 
