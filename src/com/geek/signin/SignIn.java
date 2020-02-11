@@ -47,7 +47,6 @@ public class SignIn extends HttpServlet {
 		
 		request.setAttribute( "loginC", login );
 		request.setAttribute( "passwordC", password );
-		
 		User connectedUser = null;
 
 			try {

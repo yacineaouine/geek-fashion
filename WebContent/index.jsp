@@ -1,8 +1,3 @@
-<%@ page contentType="text/html;charset=UTF-8" %>
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +25,7 @@
     <title>Geek&Fashion</title>
 </head>
 <body>
-    <!--En-tÃªte de Navigation-->
+    <!--En-t�te de Navigation-->
 
     <header >
 
@@ -38,7 +33,7 @@
         <nav class="navbar navbar-expand-sm bg-light navbar-light">
 
             <!--LOGO-->
-            <div>Vous souhaitez crÃ©er un Partenariat ?</div>
+            <div>Vous souhaitez créer un Partenariat ?</div>
 			<a href="https://amazon.fr"  target="_blank"><img alt="" src="./assets/amazon.jpg"></a>
             <!--LIENS-->
             <ul class="navbar-nav">
@@ -100,21 +95,23 @@
           <!--Barre d'information-->
           <div class="info_livraison">
             <p class="info1_livraison">Livraison gratuite</p>
-            <p class="info2_livraison">Profitez de la livraison gratuite Ã  partir de 50â¬ d'achat</p>
+            <p class="info2_livraison">Profitez de la livraison gratuite à partir de 50€ d'achat</p>
           </div>
           <img class="img-main" src="https://i.picsum.photos/id/1005/1258/600.jpg"  alt="" width="100%"> 
           <div class="overlay">
-              <p class="text-overlay">DÃ©couvre le Fashion Geek <br> qui est en toi</p>
+              <p class="text-overlay">Découvre le Fashion Geek <br> qui est en toi</p>
               <button class="btn-overlay">Voir</button>
           </div>
     </header>
 
 
     <main>
+    
+
 
         <!--Articles de la semaine-->
         <div id="article-new">
-        <h2>Les NouveautÃ©s de la Semaine</h2>
+        <h2>Les Nouveautés de la Semaine</h2>
         <div class="row container_article" width="100%">
 
             <!-- <article >
@@ -144,7 +141,7 @@
                         T-shirt Pour Homme
                     </p>
                     <p class="price">
-                        20 â¬ 
+                        20 € 
                     </p>
                     </div>
                 </div>
@@ -159,7 +156,7 @@
                         T-shirt Pour Homme
                     </p>
                     <p class="price">
-                        20 â¬ 
+                        20 € 
                     </p>
                     </div>
                 </div>
@@ -174,7 +171,7 @@
                         T-shirt Pour Homme
                     </p>
                     <p class="price">
-                        20 â¬ 
+                        20 € 
                     </p>
                     </div>
                 </div>
@@ -189,7 +186,7 @@
                         T-shirt Pour Homme
                     </p>
                     <p class="price">
-                        20 â¬ 
+                        20 € 
                     </p>
                     </div>
                 </div>
@@ -204,7 +201,7 @@
                         T-shirt Pour Homme
                     </p>
                     <p class="price">
-                        20 â¬ 
+                        20 € 
                     </p>
                     </div>
                 </div>
@@ -219,7 +216,7 @@
                         T-shirt Pour Homme
                     </p>
                     <p class="price">
-                        20 â¬ 
+                        20 € 
                     </p>
                     </div>
                 </div>
@@ -234,7 +231,7 @@
                         T-shirt Pour Homme
                     </p>
                     <p class="price">
-                        20 â¬ 
+                        20 € 
                     </p>
                     </div>
                 </div>
@@ -261,12 +258,12 @@
 
         <!--Video Promotion-->
         <div id="promo">
-            <h2>Le dÃ©filÃ© Geek Du Mois</h2>
+            <h2>Le défilé Geek Du Mois</h2>
             <div class="row">
                 <iframe class="col-lg-6" width="1180" height="590" src="https://www.youtube.com/embed/SGkoj3qiPws" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div class="col-lg-6">
-                    <h5>Recevez les derniÃ¨res News</h5>
-                    <h6>de Geek & Fashion en exclusivitÃ©s</h6>
+                    <h5>Recevez les dernières News</h5>
+                    <h6>de Geek & Fashion en exclusivités</h6>
                     <div id="form-main">
                         <div id="form-div">
                           <form class="form" id="form1">
@@ -296,7 +293,7 @@
         </div>
         </div>
 
-        <!-- CatÃ©gories -->
+        <!-- Catégories -->
         <div id="categories">
             <h2>Assumes Qui Tu Es</h2>
             <div class="row">
@@ -325,7 +322,7 @@
                 <ul>
                     <a href=""><li>Aide</li></a>
                     <a href=""><li class="light-text">Statut de la commande</li></a>
-                    <a href=""><li class="light-text">ExpÃ©dition et livraison</li></a>
+                    <a href=""><li class="light-text">Expédition et livraison</li></a>
                     <a href=""><li class="light-text">Retours</li></a>
                     <a href=""><li class="light-text">Modes de paiement</li></a>
                     <a href=""><li class="light-text">Nous contacter</li></a>
@@ -334,9 +331,9 @@
                 <ul>
                     <a href=""><li>A props de MonTitle</li></a>
                     <a href=""><li class="light-text">Infos</li></a>
-                    <a href=""><li class="light-text">CarriÃ¨res</li></a>
+                    <a href=""><li class="light-text">Carrières</li></a>
                     <a href=""><li class="light-text">Investisseurs</li></a>
-                    <a href=""><li class="light-text">DÃ©veloppement Durable</li></a>
+                    <a href=""><li class="light-text">Développement Durable</li></a>
                 </ul>
 
             </nav>
@@ -350,12 +347,12 @@
             </nav>
         </div>
         <div class="footer-bottom">
-            <span class="light-text" class="text-left">Â© 2019 MonTitle , SAS Tous droits rÃ©servÃ©s</span>
+            <span class="light-text" class="text-left">© 2019 MonTitle , SAS Tous droits réservés</span>
             <nav>
                 <ul class="text-right">
                     <a href=""><li class="light-text">Conditions de vente</li></a>
-                    <a href=""><li class="light-text">Mentions lÃ©gales</li></a>
-                    <a href=""><li class="light-text">Politique de confidentialitÃ©</li></a>
+                    <a href=""><li class="light-text">Mentions légales</li></a>
+                    <a href=""><li class="light-text">Politique de confidentialité</li></a>
                 </ul>
             </nav>
         </div>
