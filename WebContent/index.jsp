@@ -43,7 +43,7 @@
             <!--LIENS-->
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a class="nav-link" href="./signup.jsp">CrÃ©er un compte</a>
+                <a class="nav-link" href="./signup.jsp">Créer un compte</a>
               </li>
               <li class="nav-item active">
                 <a class="nav-link" href="./signin.jsp">Se connecter</a>
@@ -74,7 +74,7 @@
             <!--LIENS-->
             <ul class="navbar-nav">
               <li class="nav-item active">
-                <a id="new" class="nav-link heartbeat" href="#">NouveautÃ©s</a>
+                <a id="new" class="nav-link heartbeat" href="#">Nouveautés</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link bold-text link-txt" href="#">Homme</a>
@@ -86,7 +86,7 @@
                 <a class="nav-link bold-text link-txt" href="#">Enfant</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link bold-text link-txt" href="#l">Accessoires</a>
+                <a class="nav-link bold-text link-txt" href="Accessoires">Accessoires</a>
               </li>
             </ul>
 

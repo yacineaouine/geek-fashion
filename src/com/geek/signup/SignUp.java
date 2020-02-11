@@ -100,6 +100,7 @@ public class SignUp extends HttpServlet  {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			System.out.println(connectedUser);
 			if ( connectedUser != null ) {
 
 				HttpSession session2 = request.getSession( true );

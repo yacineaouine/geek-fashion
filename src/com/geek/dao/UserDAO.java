@@ -1,17 +1,13 @@
 package com.geek.dao;
 
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Properties;
-import com.geek.business.User;
 
-import java.sql.Statement;
+import com.geek.business.User;
 
 
 
@@ -21,7 +17,7 @@ public class UserDAO extends DAOContext {
 
 	public static User isValidLogin( String login, String password ) throws IOException, ClassNotFoundException {
 
-		/* Connexion ï¿½ la base de donnï¿½es */
+		/* Connexion à la base de données */
 
 		Connection connexion = null;
 		try {

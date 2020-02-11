@@ -1,7 +1,7 @@
 package com.geek.signin;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import com.geek.admin.Admin;
+
 
 import com.geek.business.CatalogBrowser;
 import com.geek.business.User;

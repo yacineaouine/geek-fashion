@@ -10,6 +10,7 @@ public class DAOContext {
 	
 	
 	public static void init( ServletContext context ) {
+		System.out.println("je suis ds le nit daocontext");
 		try {
 			
 			Class.forName( context.getInitParameter( "JDBC_DRIVER" ) );

@@ -5,15 +5,15 @@ public class Article {
 	private int idArticle;
 	private String description;
 	private String brand;
-	private double unitaryPrice;
+	private String unitaryPrice;
 	
 	
 	public Article() {
-		this( 0, "unknown", "unknown", 0 );
+		this( 0, "unknown", "unknown", "0" );
 	}
 	
 	
-	public Article( int idArticle, String description, String brand, double unitaryPrice ) {
+	public Article( int idArticle, String description, String brand, String unitaryPrice ) {
 		this.setIdArticle( idArticle );
 		this.setDescription( description );
 		this.setBrand( brand );
@@ -45,11 +45,11 @@ public class Article {
 		this.brand = brand;
 	}
 	
-	public double getUnitaryPrice() {
+	public String getUnitaryPrice() {
 		return unitaryPrice;
 	}
 	
-	public void setUnitaryPrice(double unitaryPrice) {
+	public void setUnitaryPrice(String unitaryPrice) {
 		this.unitaryPrice = unitaryPrice;
 	}
 	
